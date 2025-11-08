@@ -1,0 +1,119 @@
+/* Base Styling */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 90%;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #39527f;
+}
+
+/* Alpaca Display Area */
+.alpaca-display {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.alpaca-canvas {
+    position: relative;
+    width: 400px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    margin: 20px;
+}
+
+.alpaca-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; 
+}
+
+/* Customization Panel */
+.customization-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #eee;
+    transition: background-color 0.2s, border-color 0.2s;
+    font-weight: bold;
+    color: #555;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.category-btn.active, .asset-option-btn.active {
+    background-color: #39527f;
+    color: #fff;
+    border-color: #39527f;
+}
+
+.action-buttons button {
+    background-color: #a4c639;
+    color: white;
+    border: none;
+}
+
+.action-buttons button:hover {
+    background-color: #8db62c;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .alpaca-display {
+        flex: 1;
+        min-width: 450px;
+    }
+
+    .customization-panel {
+        flex: 2;
+        border-top: none;
+        padding-left: 40px;
+        border-left: 1px solid #ddd;
+    }
+}
